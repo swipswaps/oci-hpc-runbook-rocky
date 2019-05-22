@@ -88,9 +88,9 @@ You can either start the GUI if you have a VNC session started with
 
 if you do not, you can run Rocky in batch mode:
 Example 1 use 2 GPUs
-`$rockyHomeDir/Rocky/rocky4/Rocky --simulate modelName --resume 0 --use-gpu 1 --gpu-num=0 --gpu-num=1 `
+```$rockyHomeDir/Rocky/rocky4/Rocky --simulate modelName --resume 0 --use-gpu 1 --gpu-num=0 --gpu-num=1 ```
 Example 2 use 32 CPUs
-`$rockyHomeDir/Rocky/rocky4/Rocky --simulate modelName --resume 0 --use-gpu 0 -ncpus 32 `
+```$rockyHomeDir/Rocky/rocky4/Rocky --simulate modelName --resume 0 --use-gpu 0 -ncpus 32 ```
 
 ## Post-processing
 
