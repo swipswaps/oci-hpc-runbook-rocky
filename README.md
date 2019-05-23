@@ -17,11 +17,14 @@ There are multiple options available to get started with Rocky on OCI. The next 
 ### Console
 You can start by logging in the Oracle Cloud console. If this is the first time, instructions to do so are available [here](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/signingin.htm).
 Select the region in which you wish to create your instance. Click on the current region in the top right dropdown list to select another one. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/region.png" height="20">
+
+Before creating an instance, we need to configure a Virtual Cloud Network. 
+
 Create a new instance by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Compute and Instances. 
 
-<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Instances.png" height="100">
+<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Instances.png" height="300">
 
-On the next page, select <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_instance.png" height="20">
+On the next page, select <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_instance.png" height="35">
 
 In this new page, you will need to select a few things. 
 
@@ -30,10 +33,15 @@ In this new page, you will need to select a few things.
 * Change the image source to CentOS 7.
 * Instance Type: Select Bare metal
 * Instance Shape: 
-** For 8 V100 GPU, select BM.GPU3.8
-** For 2 P100 GPU, select BM.GPU2.2
-** For CPUs, select BM.HPC2.36
-** Other shapes are available as well. 
+  * For 8 V100 GPU, select BM.GPU3.8
+  * For 2 P100 GPU, select BM.GPU2.2
+  * For CPUs, select BM.HPC2.36
+  * Other shapes are available as well, [click for more information](https://cloud.oracle.com/compute/bare-metal/features).
+* SSH key: Attach your public key file. For more information, click here.
+* Virtual Cloud Network: Select the network that you have previsouly created.
+
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create.png" height="35">. 
+
 ### Terraform Script
 ## Installation
 This guide will show the different steps for the CentOS 7 image available on Oracle Cloud Infrastructure. 
