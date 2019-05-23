@@ -16,7 +16,7 @@ The architecture for this runbook is simple, a single GPU machine running inside
 There are multiple options available to get started with Rocky on OCI. The next 2 sections will show how to do it from the console in a webbrowser and using a Terraform script. Scripts are especially usefull with more complex architecture.    
 ### Console
 You can start by logging in the Oracle Cloud console. If this is the first time, instructions to do so are available [here](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/signingin.htm).
-Select the region in which you wish to create your instance. Click on the current region in the top right dropdown list to select another one. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Region.png" height="20">
+Select the region in which you wish to create your instance. Click on the current region in the top right dropdown list to select another one. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Region.png" height="30">
 
 Before creating an instance, we need to configure a Virtual Cloud Network. Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Networking and Virtual Cloud Networks. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_vcn.png" height="35">
 
