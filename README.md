@@ -9,7 +9,7 @@ Running Rocky on Oracle Cloud Infrastructure, there is no special setup needed a
 
 ![](https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/3184v0.gif "Example DEM simulation in Rocky")
 ## Architecture
-The architecture for this runbook is simple, a single GPU machine running inside of an OCI VCN.
+The architecture for this runbook is simple, a single GPU machine running inside of an OCI VCN. If you are using a GPU machine, you will need to attach a block storage or a file system. If an HPC shape is chosen, you will have a local NVMe drive attach to your instance. 
 
 ![](https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/HPC_arch_draft.png "GPU Architecture for Running Rocky in OCI")
 ## Deployment
@@ -18,7 +18,14 @@ There are multiple options available to get started with Rocky on OCI. The next 
 You can start by logging in the Oracle Cloud console. If this is the first time, instructions to do so are available [here](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/signingin.htm).
 Select the region in which you wish to create your instance. Click on the current region in the top right dropdown list to select another one. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Region.png" height="20">
 
-Before creating an instance, we need to configure a Virtual Cloud Network. 
+Before creating an instance, we need to configure a Virtual Cloud Network. Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Networking and Virtual Cloud Networks. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_vcn.png" height="35">
+
+On the next page, select the following: 
+* Name of your VCN
+* Compartment of your VCN
+* Choose "CREATE VIRTUAL CLOUD NETWORK PLUS RELATED RESOURCES"
+
+Scroll all the way down and <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_vcn.png" height="35">
 
 Create a new instance by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Compute and Instances. 
 
@@ -26,8 +33,7 @@ Create a new instance by selecting the menu <img src="https://github.com/oci-hpc
 
 On the next page, select <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_instance.png" height="35">
 
-In this new page, you will need to select a few things. 
-
+On the next page, select the following:
 * Name of your instance
 * Availibility Domain: Each region has multiple availability domain. Some instance shapes are only available in certain AD.
 * Change the image source to CentOS 7.
@@ -40,9 +46,10 @@ In this new page, you will need to select a few things.
 * SSH key: Attach your public key file. For more information, click here.
 * Virtual Cloud Network: Select the network that you have previsouly created.
 
-Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create.png" height="35">. 
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create.png" height="35">
 
 ### Terraform Script
+TO DO
 ## Installation
 This guide will show the different steps for the CentOS 7 image available on Oracle Cloud Infrastructure. 
 ### Configuring Nvidia GPUs
@@ -112,7 +119,10 @@ echo version: 1 >> ~/.Rocky/license_definition.txt
 ## Running the Application
 Running Rocky as pretty straightforward: 
 You can either start the GUI if you have a VNC session started with 
-`$rockyHomeDir/Rocky/rocky4/Rocky`
+```
+rockyHomeDir=/mnt/disk1/
+$rockyHomeDir/Rocky/rocky4/Rocky
+```
 
 if you do not, you can run Rocky in batch mode:
 
