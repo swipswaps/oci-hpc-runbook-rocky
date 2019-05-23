@@ -16,7 +16,8 @@ The architecture for this runbook is simple, a single GPU machine running inside
 There are multiple options available to get started with Rocky on OCI. The next 2 sections will show how to do it from the console in a webbrowser and using a Terraform script. Scripts are especially usefull with more complex architecture.    
 ### Console
 You can start by logging in the Oracle Cloud console. If this is the first time, instructions to do so are available [here](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/signingin.htm).
-Create a new instance by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Menu.png" height="5"> on the top left, then select Compute and Instances. 
+Create a new instance by selecting the menu on the top left, then select Compute and Instances. 
+<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20">
 <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Instances.png" height="50">
 
 
