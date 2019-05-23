@@ -54,7 +54,7 @@ On the next page, select the following:
 
 Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create.png" height="25">
 
-After a few minutes, the instances will turn green meaning it is up and running. You can now SSH into it. After clicking on the name of the instance, you will find the public IP. You can now connect using `ssh opc@xx.xx.xx.xx` 
+After a few minutes, the instances will turn green meaning it is up and running. You can now SSH into it. After clicking on the name of the instance, you will find the public IP. You can now connect using `ssh opc@xx.xx.xx.xx` from the machine using the key that was provided during the creation. 
 
 #### Block Storage
 
@@ -92,7 +92,31 @@ Copy the command to attach it to the instance.
 
 <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/iscsi_commands.png" height="200">
 
-Those commands will be used to mount the Block Volume to the instance. 
+Those commands will be used to mount the Block Volume to the instance. Log in to the machine `ssh opc@xx.xx.xx.xx` as seen at the end of the previous section. 
+
+### Mounting a drive
+
+If you have local NVMe storage or if you have attached a block storage as seen in the previous section. You will need to mount it to your running instance to be able to use it. 
+
+After logging in using ssh, run the command `lsblk`. 
+The drive should be listed with the NAME on the left (Probably sdb for block and nvme0n1 for local storage)
+
+Format the Block Volume:
+```
+sudo mkfs -t ext4 /dev/sdb
+or
+sudo mkfs -t ext4 /dev/nvme0n1
+```
+
+Create a directory and mount the drive to it.
+```
+sudo mkdir /mnt/disk1
+sudo mount /dev/sdb /mnt/disk1
+or
+sudo mount /dev/nvme0n1 /mnt/disk1
+
+```
+
 
 ### Terraform Script
 TO DO
