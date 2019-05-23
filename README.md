@@ -99,24 +99,18 @@ Those commands will be used to mount the Block Volume to the instance. Log in to
 If you have local NVMe storage or if you have attached a block storage as seen in the previous section. You will need to mount it to your running instance to be able to use it. 
 
 After logging in using ssh, run the command `lsblk`. 
-The drive should be listed with the NAME on the left (Probably sdb for block and nvme0n1 for local storage)
+The drive should be listed with the NAME on the left (Probably sdb for block and nvme0n1 for local storage, refered to as DNAME in the next commands)
 
-Format the Block Volume:
+Format the drive:
 ```
-sudo mkfs -t ext4 /dev/sdb
-or
-sudo mkfs -t ext4 /dev/nvme0n1
+sudo mkfs -t ext4 /dev/DNAME
 ```
 
 Create a directory and mount the drive to it.
 ```
 sudo mkdir /mnt/disk1
-sudo mount /dev/sdb /mnt/disk1
-or
-sudo mount /dev/nvme0n1 /mnt/disk1
-
+sudo mount /dev/DNAME /mnt/disk1
 ```
-
 
 ### Terraform Script
 TO DO
