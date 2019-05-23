@@ -16,11 +16,24 @@ The architecture for this runbook is simple, a single GPU machine running inside
 There are multiple options available to get started with Rocky on OCI. The next 2 sections will show how to do it from the console in a webbrowser and using a Terraform script. Scripts are especially usefull with more complex architecture.    
 ### Console
 You can start by logging in the Oracle Cloud console. If this is the first time, instructions to do so are available [here](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/signingin.htm).
-Create a new instance by selecting the menu on the top left, then select Compute and Instances. 
-<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20">
-<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Instances.png" height="50">
+Select the region in which you wish to create your instance. Click on the current region in the top right dropdown list to select another one. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/region.png" height="20">
+Create a new instance by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Compute and Instances. 
 
+<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Instances.png" height="100">
 
+On the next page, select <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_instance.png" height="20">
+
+In this new page, you will need to select a few things. 
+
+* Name of your instance
+* Availibility Domain: Each region has multiple availability domain. Some instance shapes are only available in certain AD.
+* Change the image source to CentOS 7.
+* Instance Type: Select Bare metal
+* Instance Shape: 
+** For 8 V100 GPU, select BM.GPU3.8
+** For 2 P100 GPU, select BM.GPU2.2
+** For CPUs, select BM.HPC2.36
+** Other shapes are available as well. 
 ### Terraform Script
 ## Installation
 This guide will show the different steps for the CentOS 7 image available on Oracle Cloud Infrastructure. 
