@@ -126,11 +126,11 @@ $rockyHomeDir/Rocky/rocky4/Rocky
 
 if you do not, you can run Rocky in batch mode:
 
-Example 1 use 2 GPUs for mmodelName
+Example 1 use 2 GPUs for modelName
 ```
 $rockyHomeDir/Rocky/rocky4/Rocky --simulate modelName --resume 0 --use-gpu 1 --gpu-num=0 --gpu-num=1 
 ```
-Example 2 use 32 CPUs for mmodelName
+Example 2 use 32 CPUs for modelName
 ```
 $rockyHomeDir/Rocky/rocky4/Rocky --simulate modelName --resume 0 --use-gpu 0 -ncpus 32
 ```
