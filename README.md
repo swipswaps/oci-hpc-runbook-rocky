@@ -21,6 +21,7 @@ You can start by logging in the Oracle Cloud console. If this is the first time,
 Select the region in which you wish to create your instance. Click on the current region in the top right dropdown list to select another one. 
 
 <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Region.png" height="50">
+
 #### Virtual Cloud Network
 Before creating an instance, we need to configure a Virtual Cloud Network. Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Networking and Virtual Cloud Networks. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_vcn.png" height="25">
 
@@ -74,9 +75,10 @@ Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/
 Click on the instance to which the drive will be attached.
 
 On the lower left, in the Ressources menu, click on "Attached Block Volumes"
+
 <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/ressources.png" height="200">
 
-Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/attach_bv.png" height="25">
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/attach_BV.png" height="25">
 
 All the default setting will work fine. Select the Block Volume that was just created and select /dev/oracleoci/oraclevdb as device path. 
 Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/attach.png" height="25">
