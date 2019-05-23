@@ -18,23 +18,25 @@ There are multiple options available to get started with Rocky on OCI. The next 
 ### Console
 #### Log In
 You can start by logging in the Oracle Cloud console. If this is the first time, instructions to do so are available [here](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/signingin.htm).
-Select the region in which you wish to create your instance. Click on the current region in the top right dropdown list to select another one. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Region.png" height="30">
+Select the region in which you wish to create your instance. Click on the current region in the top right dropdown list to select another one. 
+
+<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Region.png" height="50">
 #### Virtual Cloud Network
-Before creating an instance, we need to configure a Virtual Cloud Network. Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Networking and Virtual Cloud Networks. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_vcn.png" height="35">
+Before creating an instance, we need to configure a Virtual Cloud Network. Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Networking and Virtual Cloud Networks. <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_vcn.png" height="25">
 
 On the next page, select the following: 
 * Name of your VCN
 * Compartment of your VCN
 * Choose "CREATE VIRTUAL CLOUD NETWORK PLUS RELATED RESOURCES"
 
-Scroll all the way down and <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_vcn.png" height="35">
+Scroll all the way down and <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_vcn.png" height="25">
 
 #### Compute Instance
 Create a new instance by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Compute and Instances. 
 
 <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Instances.png" height="300">
 
-On the next page, select <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_instance.png" height="35">
+On the next page, select <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_instance.png" height="25">
 
 On the next page, select the following:
 * Name of your instance
@@ -49,7 +51,7 @@ On the next page, select the following:
 * SSH key: Attach your public key file. For more information, click here.
 * Virtual Cloud Network: Select the network that you have previsouly created.
 
-Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create.png" height="35">
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create.png" height="25">
 
 After a few minutes, the instances will turn green meaning it is up and running. You can now SSH into it. After clicking on the name of the instance, you will find the public IP. You can now connect using `ssh opc@xx.xx.xx.xx` 
 
@@ -57,7 +59,7 @@ After a few minutes, the instances will turn green meaning it is up and running.
 
 Create a new Block Volume by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Block Storage and Block Volumes.
 
-Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_bv.png" height="35">
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_bv.png" height="25">
 
 On the next page, select the following: 
 * Name
@@ -65,7 +67,7 @@ On the next page, select the following:
 * Size (in GB)
 * Availability Domain: Make sure to select the same as your Compute Instance. 
 
-Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_bv.png" height="35">
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_bv.png" height="25">
 
 Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Compute and Instances.
 
@@ -74,17 +76,19 @@ Click on the instance to which the drive will be attached.
 On the lower left, in the Ressources menu, click on "Attached Block Volumes"
 <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/ressources.png" height="200">
 
-Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/attach_bv.png" height="35">
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/attach_bv.png" height="25">
 
 All the default setting will work fine. Select the Block Volume that was just created and select /dev/oracleoci/oraclevdb as device path. 
-Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/attach.png" height="35">
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/attach.png" height="25">
 **Note: If you do not see the Block Volume, it may be because you did not place it in the same AD as your running instance**
 
-Once it is attached, hit the 3 dots at the far right of the Block Volume description and select "iSCSi Commands and Information" <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/ISCSi.png" height="100">
+Once it is attached, hit the 3 dots at the far right of the Block Volume description and select "iSCSi Commands and Information" 
+
+<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/ISCSi.png" height="150">
 
 Copy the command to attach it to the instance. 
 
-<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/iscsi_commands.png" height="100">
+<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/iscsi_commands.png" height="200">
 
 Those commands will be used to mount the Block Volume to the instance. 
 
