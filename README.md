@@ -7,7 +7,11 @@ Rocky DEM simulates particles and can be coupled with Computational Fluid Dynami
 
 Running Rocky on Oracle Cloud Infrastructure, there is no special setup needed and no driver headache. Import your model, choose the number of CPUs or GPUs and off you go. This removes the wait time for resources that you may have on your on-premise cluster. It avoids having people battling for high-end GPUs at peak times and having them idle for the rest of the week.
 
+<p align="center">
 ![](https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/3184v0.gif "Example DEM simulation in Rocky")
+ </p>
+ 
+ 
 ## Architecture
 The architecture for this runbook is simple, a single GPU machine running inside of an OCI VCN. If you are using a GPU machine, you will need to attach a block storage or a file system. If an HPC shape is chosen, you will have a local NVMe drive attach to your instance. 
 
