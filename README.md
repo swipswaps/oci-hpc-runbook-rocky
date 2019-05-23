@@ -58,6 +58,7 @@ After a few minutes, the instances will turn green meaning it is up and running.
 
 #### Block Storage
 
+**If you are running an HPC shape to run Rocky on CPUs, you can skip this part as you already have local storage on your machine. However, you will still need to mount it**
 Create a new Block Volume by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Block Storage and Block Volumes.
 
 Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create_bv.png" height="25">
@@ -94,7 +95,7 @@ Copy the command to attach it to the instance.
 
 Those commands will be used to mount the Block Volume to the instance. Log in to the machine `ssh opc@xx.xx.xx.xx` as seen at the end of the previous section. 
 
-### Mounting a drive
+#### Mounting a drive
 
 If you have local NVMe storage or if you have attached a block storage as seen in the previous section. You will need to mount it to your running instance to be able to use it. 
 
