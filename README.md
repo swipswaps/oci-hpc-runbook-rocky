@@ -132,14 +132,10 @@ To check that the installation was done correctly: `terraform -version` should r
 #### Using terraform
 ##### Configure
 Download the zip file for your needs and unzip the content:
-[GPU with Storage]()
-[HPC Shape]()
+* [GPU with Storage]()
+* [HPC Shape]()
 
-Edit the file terraform.tfvars for your settings, info can be found [here](https://www.terraform.io/docs/providers/oci/index.html#authentication)
-
-**Note1: For Compartment_ocid: To find your compartment ocid, go to the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> and select Identity, then Compartments. Find the compartment and copy the ocid.**
-
-**Note2: The private_key_path and fingerprint are not related to the ssh key to access the instance. You can create using those [instructions](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm). The SSH public and private keys can be generated like [this](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/creatingkeys.htm)**
+Edit the file terraform.tfvars for your settings, info can be found [on the terraform website](https://www.terraform.io/docs/providers/oci/index.html#authentication)
 
 * Tenancy_ocid
 * User_ocid
@@ -150,9 +146,13 @@ Edit the file terraform.tfvars for your settings, info can be found [here](https
 * SSH_public_key
 * Region
 
-Edit the file variable.tf
+**Note1: For Compartment_ocid: To find your compartment ocid, go to the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> and select Identity, then Compartments. Find the compartment and copy the ocid.**
 
-You can change the availability domain, the block storage size and the shape of the machine. 
+**Note2: The private_key_path and fingerprint are not related to the ssh key to access the instance. You can create using those [instructions](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm). The SSH public and private keys can be generated like [this](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/creatingkeys.htm)**
+
+
+In the variable.tf file, change the availability domain, the block storage size and the shape of the machine. 
+
 ##### Run
 ```
 cd <folder>
@@ -161,7 +161,6 @@ terraform plan
 terraform apply
 ```
 ##### Destroy
-Once you are done
 ```
 cd <folder>
 terraform destroy
