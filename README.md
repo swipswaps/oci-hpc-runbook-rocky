@@ -148,6 +148,8 @@ Edit the file terraform.tfvars for your settings, info can be found [on the terr
 
 **Note1: For Compartment_ocid: To find your compartment ocid, go to the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> and select Identity, then Compartments. Find the compartment and copy the ocid.**
 
+<img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/compartment_OCID.png" height="100">
+
 **Note2: The private_key_path and fingerprint are not related to the ssh key to access the instance. You can create using those [instructions](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm). The SSH public and private keys can be generated like [this](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/creatingkeys.htm)**
 
 
