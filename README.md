@@ -10,7 +10,7 @@ Running Rocky on Oracle Cloud Infrastructure, there is no special setup needed a
 ![](https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/3184v0.gif "Example DEM simulation in Rocky") 
  
 ## Architecture
-The architecture for this runbook is simple, a single GPU machine running inside of an OCI VCN. If you are using a GPU machine, you will need to attach a block storage or a file system. If an HPC shape is chosen, you will have a local NVMe drive attach to your instance. 
+The architecture for this runbook is simple, a single GPU machine running inside of an OCI VCN. If you are using a GPU machine, you will need to attach a block storage or a file system. If an HPC shape is chosen, you will have a local NVMe drive attached to your instance. 
 
 ![](https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/HPC_arch_draft.png "GPU Architecture for Running Rocky in OCI")
 ## Deployment
@@ -132,8 +132,8 @@ To check that the installation was done correctly: `terraform -version` should r
 #### Using terraform
 ##### Configure
 Download the zip file for your needs and unzip the content:
-* [GPU with Storage]()
-* [HPC Shape]()
+* [GPU with Storage](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/tf_rocky_gpu.tar)
+* [HPC Shape](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/tf_rocky_hpc.tar)
 
 Edit the file terraform.tfvars for your settings, info can be found [on the terraform website](https://www.terraform.io/docs/providers/oci/index.html#authentication)
 
@@ -252,7 +252,3 @@ Example 2 use 32 CPUs for modelName
 ```
 $rockyHomeDir/Rocky/rocky4/Rocky --simulate modelName --resume 0 --use-gpu 0 -ncpus 32
 ```
-
-## Post-processing
-
-## Expected Results
