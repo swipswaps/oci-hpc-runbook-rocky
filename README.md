@@ -188,7 +188,7 @@ sudo ./cuda_10.1.105_418.39_linux.run --silent
 ```
 ### Installing Rocky DEM
 There are a couple of library that need to be added to the CentOS image. 
-`sudo yum -y install mesa-libGLU-devel mesa-libGL-devel`
+```sudo yum -y install mesa-libGLU-devel mesa-libGL-devel```
 
 You can download the Rocky installer using wget from the ESSS website or other place. In our architecture, we have mounted a file system in the /mnt directory.
 
