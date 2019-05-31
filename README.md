@@ -132,8 +132,8 @@ To check that the installation was done correctly: `terraform -version` should r
 #### Using terraform
 ##### Configure
 Download the zip file for your needs and unzip the content:
-* [GPU with Storage](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/tf_rocky_gpu.tar)
-* [HPC Shape](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/tf_rocky_hpc.tar)
+* [GPU with Storage](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/terraform_templates/tf_rocky_gpu.tar)
+* [HPC Shape](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/terraform_templates/tf_rocky_hpc.tar)
 
 Edit the file terraform.tfvars for your settings, info can be found [on the terraform website](https://www.terraform.io/docs/providers/oci/index.html#authentication)
 
