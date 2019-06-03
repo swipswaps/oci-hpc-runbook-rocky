@@ -111,6 +111,7 @@ Create a directory and mount the drive to it.
 ```
 sudo mkdir /mnt/disk1
 sudo mount /dev/DNAME /mnt/disk1
+sudo chmod 777 /mnt/disk1
 ```
 
 ### Terraform Script
