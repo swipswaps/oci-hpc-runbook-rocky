@@ -219,8 +219,20 @@ sudo systemctl daemon-reload
 sudo systemctl start vncserver@:0.service
 sudo systemctl enable vncserver@:0.service
 ```
+In the console, we need to allow access to the different port to allow access.
 
-Now, you can use your favorite VNC viewer to log on and see the desktop.
+In Networking/Virtual Cloud Networks, select your VCN and the subnet in which your machine is located and Select the security list associated with it. 
+
+Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/addIngress.png" height="20"> 
+* CIDR : 0.0.0.0/0
+* IP PROTOCOL: TCP
+* Source Port Range: All
+* Destination Port Range:5900-5901
+
+After logging in for the first time, go to application/System Tools/Settings and in Power, set the timer for Blank Screen in Power saving to Never.
+
+<img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/CentOSSeetings.jpg" height="150"> 
+
 ## Licensing
 
 If you have enabled the VNC, you can start Rocky (`$rockyHomeDir/Rocky/rocky4/Rocky`) and it will ask how to point to your license server. 
