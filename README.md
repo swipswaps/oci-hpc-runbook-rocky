@@ -56,6 +56,8 @@ Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/ima
 
 After a few minutes, the instances will turn green meaning it is up and running. You can now SSH into it. After clicking on the name of the instance, you will find the public IP. You can now connect using `ssh opc@xx.xx.xx.xx` from the machine using the key that was provided during the creation. 
 
+**If you are using Oracle Linux 7.6 on a machine with GPU's, during instance definition, selet the advanced options at the bottom, select image and make sure to take one that contains GPU in its name. That will remove the need to install any driver**
+
 #### Block Storage
 
 **If you are running an HPC shape to run Rocky on CPUs, you can skip this part as you already have local storage on your machine. However, you will still need to mount it**
@@ -164,14 +166,15 @@ terraform plan
 terraform apply
 ```
 ##### Destroy
-```
+clear```
 cd <folder>
 terraform destroy
 ```
 
 ## Installation
-This guide will show the different steps for the CentOS 7 image available on Oracle Cloud Infrastructure. 
-### Configuring Nvidia GPUs
+This guide will show the different steps for the CentOS 7 image available on Oracle Cloud Infrastructure. There is no need to configure NVIDIA GPUs if you have selected an Oracle LINUX version for GPU. 
+
+### Configuring NVIDIA GPUs
 If you are running Rocky on CPUs this part is not needed, you can skip directly to the part "Installing Rocky DEM".
 By default, the nouveau open-source drivers are active. In order to install the Nvidia drivers, they need to be stopped. You can run the following script and reboot your machine. 
 ```
