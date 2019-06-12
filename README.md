@@ -166,7 +166,7 @@ terraform plan
 terraform apply
 ```
 ##### Destroy
-clear```
+```
 cd <folder>
 terraform destroy
 ```
