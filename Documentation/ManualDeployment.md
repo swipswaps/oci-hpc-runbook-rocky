@@ -8,24 +8,20 @@
 - [Deployment via web console](#deployment-via-web-console)
   - [Log In](#log-in-1)
   - [Virtual Cloud Network](#virtual-cloud-network)
-    - [Subnets](#subnets)
-    - [NAT Gateway](#nat-gateway)
-    - [Security List](#security-list)
-    - [Route Table](#route-table)
-    - [Subnet](#subnet)
+  - [Block Storage](#block-storage)
   - [Compute Instance](#compute-instance)
   - [Mounting a drive](#mounting-a-drive)
   - [Creating a Network File System](#creating-a-network-file-system)
     - [Headnode](#headnode)
-    - [Compute Nodes](#compute-nodes)
-  - [Allow communication between machines](#allow-communication-between-machines)
+    - [Visualization Node](#visualization-nodes)
   - [Adding a GPU Node for pre/post processing](#adding-a-gpu-node-for-prepost-processing)
   - [Set up a VNC](#set-up-a-vnc)
   - [Accessing a VNC](#accessing-a-vnc)
 - [Installation](#installation)
   - [Connecting all compute node](#connecting-all-compute-node)
-  - [Disable Hyperthreading](#disable-hyperthreading)
-  - [Installing Rocky](#installing-rocky)
+  - [Configuring NVIDIA GPUs](#configuring-nvidia-gpus)
+  - [Installing Rocky DEM](#installing-rocky-dem)
+  - [Licensing](#licensing)
 
 ## Log In
 You can start by logging in the Oracle Cloud console. If this is the first time, instructions to do so are available [here](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/signingin.htm).
@@ -45,7 +41,7 @@ Scroll all the way down and <img src="https://github.com/oci-hpc/oci-hpc-runbook
 
 Close the next window. 
 
-#### Compute Instance
+## Compute Instance
 Create a new instance by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Compute and Instances. 
 
 <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/Instances.png" height="300">
@@ -71,7 +67,7 @@ After a few minutes, the instances will turn green meaning it is up and running.
 
 **If you are using Oracle Linux 7.6 on a machine with GPU's, during instance definition, selet the advanced options at the bottom, select image and make sure to take one that contains GPU in its name. That will remove the need to install any driver**
 
-#### Block Storage
+## Block Storage
 
 **If you are running an HPC shape to run Rocky on CPUs, you can skip this part as you already have local storage on your machine. However, you will still need to mount it**
 Create a new Block Volume by selecting the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/menu.png" height="20"> on the top left, then select Block Storage and Block Volumes.
@@ -110,7 +106,7 @@ Copy the command to attach it to the instance.
 
 Those commands will be used to mount the Block Volume to the instance. Log in to the machine `ssh opc@xx.xx.xx.xx` as seen at the end of the previous section. 
 
-#### Mounting a drive
+## Mounting a drive
 
 If you have local NVMe storage or if you have attached a block storage as seen in the previous section. You will need to mount it to your running instance to be able to use it. 
 
