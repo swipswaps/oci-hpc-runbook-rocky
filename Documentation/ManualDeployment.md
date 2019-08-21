@@ -18,7 +18,6 @@
   - [Set up a VNC](#set-up-a-vnc)
   - [Accessing a VNC](#accessing-a-vnc)
 - [Installation](#installation)
-  - [Connecting all compute node](#connecting-all-compute-node)
   - [Configuring NVIDIA GPUs](#configuring-nvidia-gpus)
   - [Installing Rocky DEM](#installing-rocky-dem)
   - [Licensing](#licensing)
