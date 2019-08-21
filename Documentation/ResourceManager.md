@@ -1,4 +1,4 @@
-# <img src="https://github.com/oci-hpc/oci-hpc-runbook-StarCCM/raw/master/Images/STARCCM_logo.png" height="60"> Siemens Simcenter STAR-CCM+ Runbook
+# <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/rockylogo.png" height="40"> Runbook
 
 
 # Deployment through Resource Manager
@@ -7,7 +7,7 @@
 - [Deployment through Resource Manager](#deployment-through-resource-manager)
   - [Log In](#log-in)
   - [Resource Manager](#resource-manager)
-  - [Add STAR-CCM+ installer to Object Storage](#add-star-ccm-installer-to-object-storage)
+  - [Add Rocky DEM installer to Object Storage](#add-star-ccm-installer-to-object-storage)
   - [Select variables](#select-variables)
   - [Run the stack](#run-the-stack)
   - [Access your cluster](#access-your-cluster)
@@ -20,21 +20,19 @@ Select the region in which you wish to create your instance. Click on the curren
 <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/Region.png" height="50">
 
 ## Resource Manager
-In the OCI console, there is a Resource Manager available that will create all the resources needed. 
+In the OCI console, there is a Resource Manager available that will create all the resources needed. The region in which you create the stack will be the region in which it is deployed.
 
 Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/menu.png" height="20"> on the top left, then select Resource Manager and Stacks. 
 
 Create a new stack: <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/stack.png" height="20">
 
-Download the [ZIP file](https://github.com/oci-hpc/oci-hpc-runbook-StarCCM/raw/master/Terraform/starccm.zip) for STAR-CCM+
-
-Add you private key to the zip file
+Download the [ZIP file](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/Terraform/rocky.zip) for Rocky
 
 Upload the ZIP file
 
 Choose the Name and Compartment
 
-## Add STAR-CCM+ installer to Object Storage
+## Add Rocky installer to Object Storage
 Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/menu.png" height="20"> on the top left, then select Object Storage and Object Storage.
 
 Create a new bucket or select an existing one. To create one, click on <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/create_bucket.png" height="20">
@@ -57,14 +55,12 @@ In the next window, copy the "PRE-AUTHENTICATED REQUEST URL" and keep it. You wi
 Click on <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/next.png" height="20"> and fill in the variables. 
 
 * AD: Availability Domain of the cluster (1,2 or 3)
-* COMPUTENODE_COUNT: Number of compute machines (Integer)
-* COMPUTE_SHAPE: Shape of the Compute Node (BM.HPC2.36)
-* HEADNODE_SHAPE: Shape of the Head Node which is also a Compute Node in our architecture (BM.HPC2.36)
+* HEADNODE_SHAPE: Shape of the Head Node which is also the Compute Node in our architecture (BM.HPC2.36)
 * GPUNODE_COUNT: Number of GPU machines for Pre/Post
-* GPUPASSWORD: password to use the VNC session on the Pre/Post Node
+* VNCPASSWORD: password to use the VNC session on the Pre/Post Node
 * GPU_AD: Availability Domain of the GPU Machine (1, 2 or 3)
-* GPU_SHAPE: Shape of the Compute Node (VM.GPU2.1, BM.GPU2.2,...)
-* INSTALLER_URL: URL of the installer of STAR-CCM+
+* GPU_SHAPE: Shape of the Visualization Node (VM.GPU2.1, BM.GPU2.2,...)
+* INSTALLER_URL: URL of the installer of Rocky
 
 Click on <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/next.png" height="20">
 
@@ -79,7 +75,7 @@ In the "Terraform Actions" dropdown menu <img src="https://github.com/oci-hpc/oc
 
 ## Access your cluster
 
-Once you have created your cluster, if you gave a valid URL for the STAR-CCM+ installation, no other action will be needed except [running your jobs](https://github.com/oci-hpc/oci-hpc-runbook-StarCCM/blob/master/Documentation/STAR-CCM%2B.md#running-the-application).
+Once you have created your cluster, if you gave a valid URL for the Rocky installation, no other action will be needed except [running your jobs](https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/Documentation/STAR-CCM%2B.md#running-the-application).
 
 Public IP addresses of the created machines can be found on the lower left menu under Outputs. 
 
@@ -98,6 +94,6 @@ ssh -i /home/user/key -x -L 5902:127.0.0.1:5900 opc@ipaddress
 
 And then connect to a VNC viewer with localhost:2.
 
-[More information](https://github.com/oci-hpc/oci-hpc-runbook-StarCCM/blob/master/Documentation/ManualDeployment.md#accessing-a-vnc) about using a VNC session. 
+[More information](https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/Documentation/ManualDeployment.md#accessing-a-vnc) about using a VNC session. 
 
 
