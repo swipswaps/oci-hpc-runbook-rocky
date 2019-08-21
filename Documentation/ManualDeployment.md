@@ -6,7 +6,7 @@
 **Table of Contents**
 
 - [Deployment via web console](#deployment-via-web-console)
-  - [Log In](#log-in-1)
+  - [Log In](#log-in)
   - [Virtual Cloud Network](#virtual-cloud-network)
   - [Block Storage](#block-storage)
   - [Compute Instance](#compute-instance)
