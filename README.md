@@ -18,8 +18,6 @@ Running Rocky on Oracle Cloud Infrastructure, there is no special setup needed a
 - [Installing Rocky](#installing-rocky)
 - [Running the Application](#running-the-application)
 - [Benchmark Example](#benchmark-example)
-  - [17 Millions Cells](#17-millions-cells)
-  - [105 Millions Cells](#105-millions-cells)
  
 # Architecture
 The architecture for this runbook is simple, a single machine running inside of an OCI VCN with a public subnet. If you are using a GPU machine, you will need to attach a block storage or a file system. If an HPC shape is chosen, you will have a local NVMe drive attached to your instance. 
