@@ -26,7 +26,7 @@ Select the menu <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob
 
 Create a new stack: <img src="https://github.com/oci-hpc/oci-hpc-runbook-shared/blob/master/images/stack.png" height="20">
 
-Download the [ZIP file](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/Terraform/rocky.zip) for Rocky
+Download the [ZIP file](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/Resources/rocky.zip) for Rocky
 
 Upload the ZIP file
 
