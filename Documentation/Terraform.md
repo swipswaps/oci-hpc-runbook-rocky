@@ -27,8 +27,7 @@ To check that the installation was done correctly: `terraform -version` should r
 
 ## Using terraform
 ### Configure
-Download the zip file and unzip the content:
-* [Rocky](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/Resources/tf_rocky.zip)
+Download the [zip](https://github.com/oci-hpc/oci-hpc-runbook-rocky/raw/master/Resources/tf_rocky.zip) file and unzip the content.
 
 Edit the file terraform.tfvars for your settings, info can be found [on the terraform website](https://www.terraform.io/docs/providers/oci/index.html#authentication)
 
