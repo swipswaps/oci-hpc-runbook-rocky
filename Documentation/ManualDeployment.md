@@ -57,7 +57,7 @@ On the next page, select the following:
   * For 2 P100 GPU, select BM.GPU2.2
   * For CPUs, select BM.HPC2.36
   * Other shapes are available as well, [click for more information](https://cloud.oracle.com/compute/bare-metal/features).
-* SSH key: Attach your public key file. For more information, click here.
+* SSH key: Attach your public key file. For more information, click [here](https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/creatingkeys.htm).
 * Virtual Cloud Network: Select the network that you have previsouly created.
 
 Click <img src="https://github.com/oci-hpc/oci-hpc-runbook-rocky/blob/master/images/create.png" height="25">
