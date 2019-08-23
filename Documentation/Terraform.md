@@ -45,7 +45,7 @@ Edit the file terraform.tfvars for your settings, info can be found [on the terr
 **Note2: The private_key_path and fingerprint are not related to the ssh key to access the instance. You can create using those [instructions](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm).**
 
 
-In the variable.tf file, you can change the availability domain, the number of compute nodes, the number of GPU nodes, the shapes of the instances,... 
+In the variable.tf file, you can change the availability domain, the shapes of the nodes, the number of visualization nodes, the VNC settings, Rocky installer URL,... 
 
 ### Run
 ```
