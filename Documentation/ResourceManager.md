@@ -76,6 +76,9 @@ File Storage:
 Block Options:
 * BLOCK VOLUME SIZE ( GB ): Size of the shared block volume
 
+FSS Options:
+* AVAILABILITY DOMAIN OF FSS: AD of the FSS mount
+
 Rocky:
 * URL TO DOWNLOAD ROCKY DEM: URL of the installer of Rocky (Leave blank if you wish to download later)
 * URL TO DOWNLOAD A MODEL TARBALL: URL of the model you wish to run (Leave blank if you wish to download later)
