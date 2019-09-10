@@ -49,7 +49,3 @@ Example 2 use 32 CPUs for modelName
 ```
 $rockyHomeDir/Rocky/rocky4/Rocky --simulate modelName --resume 0 --use-gpu 0 -ncpus 32
 ```
-
-# Benchmark Example
-## 
-## 
